@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <style>
+    .Main{
+        position: relative;
+        background-color: wheat;
+        width: 100vw;
+        height: 100vh;
+    }
+    .sub1{
+        position: absolute;
+        width: 70vw;
+        height: 70vh;
+        left: 15vw;
+        top: 15vh;
+        background-color: orangered;
+        border-radius: 50px;
+        
+    }
+    table{
+        position: absolute;
+        left: 35vw;
+        top:3vh;
+        padding-left: 25px;
+        font-size: larger;
+        color: wheat;
+    }
+    td{
+        padding-left: 20px;
+        cursor: pointer;
+        transition: 0.03s;
+    }
+    td:hover{
+        color: black;
+        text-decoration: underline;
+    }
+    td a{
+        text-decoration: none;
+        color: wheat
+    }
+    td a:hover{
+        color: black;
+        text-decoration: underline;
+    }
+    .Box{
+        width: 14vw;
+        height: 42vh;
+        background-color: wheat;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 30px;
+    }
+    .Box:hover{
+        transform: scale(1.1);
+        filter: drop-shadow(5px 5px 5px black);
+    }
+    .Box img{
+        width: 12vw;
+        height: 22vh;
+        border: 2px solid whitesmoke;
+        border-radius: 20px;
+        margin-bottom: 5px;
+    }
+    .Box button{
+        background-color: orangered;
+        color: white;
+        width: 100px;
+        height: 30px;
+        border-radius: 30px;
+    }
+    .Box button:hover{
+        background-color: black;
+    }
+    .Box h1{
+        font-size: x-large;
+    }
+    .sub2{
+        position: absolute;
+        left: 3vw;
+        top: 18vh;
+    }
+    .sub3{
+        position: absolute;
+        left: 20vw;
+        top: 18vh;
+        
+    }
+    .sub4{
+        position: absolute;
+        left: 36.5vw;
+        top: 18vh;
+    }
+    .sub5{
+        position: absolute;
+        right: 3vw;
+        top: 18vh;
+    }
+ </style>   
+<body>
+    <div class="Main">
+        <div class="sub1">
+            <table>
+                <tr>
+                    <td><a href="Home.html">Home</a></td>
+                    <td>Menu</td>
+                    <td>Contact</td>
+                    <td>Location</td>
+                    <td><a href="Login.html">Login</a></td>
+                </tr>
+            </table>
+            <div class="sub2 Box">
+               <h1>Non Veg Items</h1>
+               <img src="https://static.vecteezy.com/system/resources/thumbnails/029/858/402/small/of-tandoori-chicken-as-a-dish-in-a-high-end-restaurant-generative-ai-photo.jpg" alt="">
+               <button>View</button>
+            </div>
+            <div class="sub3 Box">
+               <h1>Veg Items</h1>
+               <img src="https://www.godavarivantillu.com/cdn/shop/files/VegMealsStandard.png?v=1711392925" alt="">
+               <button>View</button>
+            </div>
+            <div class="sub4 Box">
+                <h1>Tiffin Items</h1>
+                <img src="https://i.pinimg.com/originals/d4/d9/92/d4d99263af05d7dd01dbe7a6a295b27b.jpg" alt="">
+                <button>View</button>
+            </div>
+            <div class="sub5 Box">
+                <h1>Snacks</h1>
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/hm3kio94iijejggzghfr" alt="">
+                <button>View</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
