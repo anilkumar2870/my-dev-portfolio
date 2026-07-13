@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<style>
+    .Main{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-color: wheat;
+    }
+    .sub{
+        position: absolute ;
+        width: 70vw;
+        height: 70vh;
+        left: 15vw;
+        top:15vh;
+        background-color: orangered;
+        border-radius: 50px;
+    }
+    img{
+        position: absolute;
+        width: 30vw;
+        height: 55vh;
+        left: 37vw;
+        top: 10vh;
+    }
+    .sub1{
+        position: absolute;
+        width: 30vw;
+        height: 60vh;
+        left: 20vw;
+        top: 20vh;
+        text-align: center;
+        border-radius: 15px;
+        border: 1px solid black;
+        background-color: wheat;
+    }
+    h1{
+        font-size: 2.5em;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        color: black;
+    }
+    .sub2{
+        position: relative;
+    }
+    .sub2 input{
+        width: 90%;
+        padding: 12px;
+        border: 1px solid;
+        border-radius: 5px;
+        background-color:transparent;
+        font-size: 1em;
+        box-sizing: border-box;
+    }
+    .sub2 input::placeholder{
+        color: black;
+    }
+    #msg1{
+        display: flex;
+        justify-content:flex-end;
+        padding-right: 20px;
+        font-size:small;
+    }
+    #msg2{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+        font-size: small;
+    }
+    .sub3{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .RM{
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+    }
+    .sub3 a{
+        display: flex;
+        text-decoration: none;
+        padding-right:20px;
+        color: blue;
+    }
+    .sub3 a:hover{
+        color: blue;
+        text-decoration: underline;
+    }
+    button{
+        width: 80%;
+        padding: 8px;
+        border: 1px solid;
+        border-radius: 20px;
+        background-color: transparent;
+        color: black;
+        font-size: larger;
+    }
+    button:hover{
+        background-color: orangered;
+        color: aliceblue;
+    }
+    p a{
+        color: blue;
+        text-decoration: none;
+    }
+    p a:hover{
+        color: blue;
+        text-decoration: underline;
+    }
+    table{
+        position: absolute;
+        left: 35vw;
+        top:3vh;
+        padding-left: 25px;
+        font-size: larger;
+        color: wheat;
+    }
+    td{
+        padding-left: 20px;
+        cursor: pointer;
+        transition: 0.03s;
+    }
+    td:hover{
+        color: black;
+        text-decoration: underline;
+    }
+    td a{
+        text-decoration: none;
+        color: wheat
+    }
+    td a:hover{
+        color: black;
+        text-decoration: underline;
+    }
+</style>
+<body>
+    <div class="Main">
+        <div class="sub">
+            <table>
+                <tr>
+                    <td><a href="Home.html">Home</a></td>
+                    <td><a href="Menu.html">Menu</a></td>
+                    <td>Contact</td>
+                    <td>Location</td>
+                    <td>Login</td>
+                </tr>
+            </table>
+            <img src="https://png.pngtree.com/png-vector/20250517/ourmid/pngtree-delivery-rider-on-a-bright-green-scooter-boy-png-image_16305518.png" alt="">
+        </div>
+        <div class="sub1 Box">
+            <h1>Login</h1><br>
+            <form onsubmit="return submitForm()">
+                <div class="sub2">
+                    <input type="email" placeholder="Email Id" id="E">
+                </div>
+                <span style="color: red;" id="msg1"></span><br>
+                <div class="sub2">
+                    <input type="password" placeholder="Password" id="pwd">
+                </div>
+                <span style="color: red;" id="msg2"></span><br>
+                <div class="sub3">
+                    <label class="RM">
+                        <input type="checkbox">Remember Me
+                    </label>
+                    <a href="">Forgot Password?</a>
+                </div>
+                    <button>Login</button>
+                    <p>Don't have an account?<a href="">Register</a></p>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script>
+    function submitForm(){
+        let UserMail = document.getElementById("E").value;
+        let UserPassword = document.getElementById("pwd").value;
+        if(UserMail ==""){
+            document.getElementById("msg1").innerHTML = "please Enter your Email Id";
+            return false;
+        }
+        else{
+            document.getElementById("msg1").innerHTML =""
+        }
+        if(UserPassword ==""){
+            document.getElementById("msg2").innerHTML = "Please Enter your password";
+            return false;
+        }
+        else{
+            document.getElementById("msg2").innerHTML =""
+        }
+        alert("Form is submitted?")
+        localStorage.setItem("User Mail",UserMail);
+        localStorage.setItem("User Password",UserPassword);
+        return true;
+    }
+</script>
+</html>
